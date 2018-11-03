@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[5]:
+# In[3]:
 
 
 #level2 주식가격
@@ -19,8 +19,33 @@ for i in range(len(prices)):
 print(answer)
 
 
-# In[ ]:
+# In[8]:
 
 
-
+#level2 예상 대진표
+n = 8
+a = 4
+b = 10
+A = min(a,b)
+B = max(a,b)
+count = 1
+while(A%2==0 or A+1 != B):
+    if A == 0 or B == 0:
+        break
+    print (A,B , count)
+    count += 1
+    if A%2 != 0 and B%2 != 0:
+        A = (A+1)//2
+        B = (B+1)//2
+    elif A%2 == 0 and B%2 != 0:
+        A = A//2
+        B = (B+1)//2
+    elif A%2 !=0 and B%2 ==0:
+        A = (A+1)//2
+        B = B//2
+    elif A%2 ==0 and B%2 ==0:
+        A = A//2
+        B = B//2
+print(A,B, count)
+    
 
