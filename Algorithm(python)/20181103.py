@@ -88,8 +88,31 @@ print(print_idx.index(location)+1)
 print(priorities, print_idx)
 
 
-# In[ ]:
+# In[15]:
 
 
+#level2 기능개발
+progresses = [93,30,55,90]
+speeds = [1,30,5,90]
+answer=[]
+day = []
+for i in range(len(progresses)):
+    count = 0
+    while progresses[i] < 100:
+        progresses[i] += speeds[i]
+        count+=1
+    day.insert(0,count)
+print(day)
 
+while day != []:
+    check=day.pop()
+    count=1
+    for i in range(len(day),0,-1):
+        if day[i-1] < check:
+            day.pop()
+            count+=1
+        else:
+            break
+    answer.append(count)
+print(answer)
 
